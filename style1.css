@@ -1,0 +1,238 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0vh 5vw;
+    height: 90vh;
+}
+
+/* ===================== Styles for the section with the Nav Bar ======================= */
+
+/* Overall layout inside the Nav Bar */
+/* .container {
+    height: 100%;
+} */
+
+.navbar-container {
+    height: 20vh;
+    /* margin-bottom: 50px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-container>div:first-child {
+    width: 25%;
+}
+
+.navbar-container>div:nth-child(2) {
+    width: 50%;
+    text-align: center;
+}
+
+.button-group {
+    width: 25%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+/* styles for the logo */
+.navbar-container>div:first-child img {
+    height: 50px;
+}
+
+/* layout inside the unordered list */
+.list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-item {
+    width: 25%;
+    list-style: none;
+    font-family: 'Orbitron';
+    font-weight: 500;
+    font-size: 20px;
+}
+
+/* styling for Home and its underline */
+.list-item:first-child {
+    /* background-color: red; */
+    font-weight: 600;
+    font-size: 25px;
+    /* There is an extra height in between the "Home" and the below underline, this is bcz of line-height. */
+    /* So decraese the line-heigth in order to reduce the spacing between the text-"Home" and its underline */
+    line-height: 10px;
+}
+
+.list-item:first-child::after{
+    content: '';
+    height: 3px;
+    width: 50%;
+    background-color: #000000;
+    /* there will be no effect of above height and width  bcz this ::after element is an inline element (you can see that in dev tool's computed window*/
+    /* so that the height and width gets its effect on the ::after element, make its display as 'inline-block' */
+    display: inline-block;
+}
+
+
+/* styles for the button-group */
+.search-icon {
+    /* text-align: center; */
+    padding: 0px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.nav-button {
+    background-color: #ffffff;
+    border: 3px solid black;
+    border-radius: 10px;
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 20px;
+    padding: 5px 40px;
+}
+
+
+/* ===================== Styles for the section with the Banner ======================= */
+
+.hero-container {
+    display: flex;
+    /* justify-content: stretch; */
+    position: relative;
+    height: 70vh;
+}
+
+.square{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-left: 100px;
+    margin-top: 500px;
+}
+
+.square img {
+    width: 350px;
+}
+
+.globe {
+    position: absolute;
+    left: 50%;
+}
+
+.globe img {
+    height: 60px;
+}
+
+.star {
+    position: absolute;
+    top: 30px;
+    right: 10vw;
+}
+
+.star img {
+    height: 60px;
+}
+
+
+.hero-container>div:nth-child(4) {
+    /* background-color: #ff0000; */
+    position: absolute;
+    top:0;
+    left:0;
+    /* height: 80%; */
+}
+
+.hero-container>div:nth-child(4) img {
+    height: 480px;
+}
+
+.hero-container-right {
+    /* margin-top: 15vh; */
+    /* margin-bottom: 0; */
+    /* margin-left: auto; */
+    /* margin-right: 0px; */
+    margin: 15vh auto 0;
+    text-align: center;
+    position: relative;
+}
+
+/* styles for elements inside hero-container-right */
+.hero-heading {
+    font-family: Orbitron;
+    font-weight: 800;
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+
+.hero-description {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 14px;
+    /* padding: 5px 20%; */
+    max-width: 500px;
+    width: 80%;
+    margin: 0px auto 50px;
+    opacity: 0.6;
+    text-align: justify;
+    /* The below property will align only teh last line the paargraph to center */
+    text-align-last: center; 
+}
+
+.button-email {
+    background-color: white;
+    border: 3px solid black;
+    font-family: Orbitron;
+    font-weight: 400;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 0px 20px;
+    /* for the blur effect use the "opacity" property */
+    opacity: .7;
+}
+
+.button-join {
+    color:white;
+    background-color: black;
+    /* To make the text in UpperCase */
+    text-transform: capitalize;
+    font-family: Orbitron;
+    font-weight: 400;
+    font-size: 20px;
+    border-radius: 8px;
+    padding: 0px 5px;
+}
+
+.contact-heading {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 20px;
+    opacity: 0.7;
+}
+
+.icons img {
+    height: 30px;
+    margin: 10px;
+}
+
+.second-star {
+    position:absolute;
+    bottom: 10px;
+    left: 0px;
+}
+
+.second-star img {
+    height: 5vh;
+}
